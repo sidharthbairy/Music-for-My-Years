@@ -9,10 +9,10 @@ from openai import OpenAI
 client = OpenAI()
 
 app = Flask(__name__)
-app.secret_key = "5lRvFSWQxtsYes8i"
+app.secret_key = "" #hidden
 
-CLIENT_ID = "94f2bac958d84338a4a68c915961a3c0"
-CLIENT_SECRET = "b9bca2d6f9304a22824c0be37a7f184c"
+CLIENT_ID = "" #hidden
+CLIENT_SECRET = "" #hidden
 REDIRECT_URI = "http://localhost:5001/callback"
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
