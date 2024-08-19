@@ -1,4 +1,4 @@
-# Music-for-My-Years
+# Music for My Years
 
 "Music for My Years" is a Flask app that recommends music to the user based on their age. It creates a Spotify playlist containing the recommended songs and adds it to their account. My project uses one HTML file to prompt the user for their age. At this point, you can probably tell that the bulk of my project is backend, which is where my interest lies.
 
