@@ -5,14 +5,15 @@ import json
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, jsonify, session
 from openai import OpenAI
+import os
 
 client = OpenAI()
 
 app = Flask(__name__)
-app.secret_key = "" #hidden
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
-CLIENT_ID = "" #hidden
-CLIENT_SECRET = "" #hidden
+CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID)
+CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 REDIRECT_URI = "http://localhost:5001/callback"
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
