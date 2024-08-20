@@ -12,7 +12,7 @@ client = OpenAI()
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
-CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID)
+CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 REDIRECT_URI = "http://localhost:5001/callback"
 
