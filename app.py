@@ -14,7 +14,7 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
-REDIRECT_URI = "http://localhost:5001/callback"
+REDIRECT_URI = "https://music-for-my-years-bee4.onrender.com/callback"
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
 TOKEN_URL = "https://accounts.spotify.com/api/token"
