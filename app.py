@@ -1,19 +1,22 @@
 import requests
 import urllib.parse
 import json
+import os
 
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, jsonify, session
 from openai import OpenAI
+from dotenv import load_dotenv
 
 client = OpenAI()
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = "5lRvFSWQxtsYes8i"
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
-CLIENT_ID = "94f2bac958d84338a4a68c915961a3c0"
-CLIENT_SECRET = "b9bca2d6f9304a22824c0be37a7f184c"
-REDIRECT_URI = "http://localhost:5001/callback"
+CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+REDIRECT_URI = "https://music-for-my-years-bee4.onrender.com/callback"
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
 TOKEN_URL = "https://accounts.spotify.com/api/token"
