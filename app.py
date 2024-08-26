@@ -6,6 +6,7 @@ import os
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, jsonify, session
 from openai import OpenAI
+import os
 from dotenv import load_dotenv
 
 client = OpenAI()
@@ -22,9 +23,8 @@ AUTH_URL = "https://accounts.spotify.com/authorize"
 TOKEN_URL = "https://accounts.spotify.com/api/token"
 API_BASE_URL = "https://api.spotify.com/v1/"
 
-
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5001)))
 
 
 @app.route("/")
