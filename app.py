@@ -6,7 +6,6 @@ import os
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, jsonify, session
 from openai import OpenAI
-import os
 from dotenv import load_dotenv
 
 client = OpenAI()
