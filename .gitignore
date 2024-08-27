@@ -1,5 +1,0 @@
-.env
-__pycache__/
-venv/
-get_pip.py
-.DS_Store
